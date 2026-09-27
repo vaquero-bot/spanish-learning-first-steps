@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="Four interactive lessons to learn Spanish step by step.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <title>Little Steps · Spanish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><span>Little Steps</span></div>
+      <button class="icon-button" id="resetBtn" aria-label="Reset progress" title="Reset progress">↻</button>
+    </header>
+    <section class="hero">
+      <p class="eyebrow">SPANISH, ONE STEP AT A TIME</p>
+      <h1>¡Hola! <span>Let’s learn.</span></h1>
+      <p class="intro">Learn Spanish at your own pace. Listen, repeat, and celebrate every little step.</p>
+    </section>
+    <section class="progress-card" aria-label="Lesson progress">
+      <div class="progress-copy"><span id="lessonNumber">Lesson 1 · First steps</span><strong id="progressLabel">0 / 8 learned</strong></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </section>
+    <section class="lesson-head">
+      <div><p class="eyebrow">CARD <span id="cardNumber">1</span> OF <span id="cardTotal">8</span></p><h2 id="lessonTitle">Greetings and useful phrases</h2></div>
+      <div class="lesson-controls"><button class="lesson-nav" id="previousLessonBtn" aria-label="Previous lesson">‹</button><span class="lesson-badge" id="lessonBadge">A1</span><button class="lesson-nav" id="nextLessonBtn" aria-label="Next lesson">›</button></div>
+    </section>
+    <section class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Tarjeta. Toca para revelar la traducción">
+      <div class="card-top"><span class="category">GREETINGS</span><button class="sound-button" id="soundBtn" aria-label="Listen to pronunciation">◖</button></div>
+      <div class="card-center"><p class="word" id="word">Hola</p><p class="pronunciation" id="pronunciation">/ó-la/</p><div class="reveal-hint" id="revealHint"><span>Tap to reveal the translation</span><span class="hand">⌁</span></div><p class="translation hidden" id="translation">Hello</p></div>
+      <div class="card-bottom"><span id="exampleLabel">Example</span><p id="example">Hola, ¿cómo estás?</p><p class="example-translation" id="exampleTranslation">Hello, how are you?</p></div>
+    </section>
+    <div class="actions"><button class="secondary-button" id="againBtn">Review</button><button class="primary-button" id="knowBtn">I know it <span>→</span></button></div>
+    <p class="tip"><span>♡</span> Say the phrase out loud. Little by little!</p>
+    <nav class="lesson-picker" id="lessonPicker" aria-label="Choose a lesson"></nav>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
